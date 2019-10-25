@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="u_state" table="x_95818_hvc_deploy_deployment" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_state</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>Choice 2</label>
+            <language>en</language>
+            <name>x_95818_hvc_deploy_deployment</name>
+            <sequence>0</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-21 14:21:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>86943bfedba800101150ab7dca961900</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-21 14:26:37</sys_updated_on>
+            <value>Choice 2</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>New</label>
+            <language>en</language>
+            <name>x_95818_hvc_deploy_deployment</name>
+            <sequence>0</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-21 14:21:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b194f7fedba800101150ab7dca9619ff</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-21 14:21:47</sys_updated_on>
+            <value>new</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_state</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>Choice 3</label>
+            <language>en</language>
+            <name>x_95818_hvc_deploy_deployment</name>
+            <sequence>1</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-21 14:21:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>06943bfedba800101150ab7dca961901</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-21 14:26:37</sys_updated_on>
+            <value>Choice 3</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Success</label>
+            <language>en</language>
+            <name>x_95818_hvc_deploy_deployment</name>
+            <sequence>1</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-21 14:26:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f4b53f32dbe800101150ab7dca961934</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-21 14:26:37</sys_updated_on>
+            <value>success</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Failed</label>
+            <language>en</language>
+            <name>x_95818_hvc_deploy_deployment</name>
+            <sequence>2</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-21 14:26:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>74b53f32dbe800101150ab7dca961935</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-21 14:26:37</sys_updated_on>
+            <value>failed</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Scheduling</label>
+            <language>en</language>
+            <name>x_95818_hvc_deploy_deployment</name>
+            <sequence>3</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-21 14:26:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f0b53f32dbe800101150ab7dca961936</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-21 14:26:37</sys_updated_on>
+            <value>scheduling</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Work In Progress</label>
+            <language>en</language>
+            <name>x_95818_hvc_deploy_deployment</name>
+            <sequence>4</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-21 14:26:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>70b53f32dbe800101150ab7dca961937</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-21 14:26:37</sys_updated_on>
+            <value>work in progress</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Cancelled</label>
+            <language>en</language>
+            <name>x_95818_hvc_deploy_deployment</name>
+            <sequence>5</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-21 14:26:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>fcb53f32dbe800101150ab7dca961937</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-21 14:26:37</sys_updated_on>
+            <value>cancelled</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>u_state</element>
+            <name>x_95818_hvc_deploy_deployment</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-10-21 14:21:47</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>f994f7fedba800101150ab7dca9619ff</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>u_state</sys_name>
+            <sys_package display_value="HVC_DeployNow" source="x_95818_hvc_deploy">0d367af2db6400101150ab7dca96196a</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="HVC_DeployNow">0d367af2db6400101150ab7dca96196a</sys_scope>
+            <sys_update_name>sys_choice_x_95818_hvc_deploy_deployment_u_state</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-10-21 14:21:47</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

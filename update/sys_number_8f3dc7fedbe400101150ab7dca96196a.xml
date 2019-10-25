@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number">
+    <sys_number action="INSERT_OR_UPDATE">
+        <category display_value="" name="x_95818_hvc_deploy_deployment">x_95818_hvc_deploy_deployment</category>
+        <maximum_digits>7</maximum_digits>
+        <number>1000</number>
+        <prefix>DEP</prefix>
+        <sys_class_name>sys_number</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-21 11:29:49</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>8f3dc7fedbe400101150ab7dca96196a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DEP</sys_name>
+        <sys_package display_value="HVC_DeployNow" source="x_95818_hvc_deploy">0d367af2db6400101150ab7dca96196a</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="HVC_DeployNow">0d367af2db6400101150ab7dca96196a</sys_scope>
+        <sys_update_name>sys_number_8f3dc7fedbe400101150ab7dca96196a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-21 11:29:49</sys_updated_on>
+    </sys_number>
+</record_update>

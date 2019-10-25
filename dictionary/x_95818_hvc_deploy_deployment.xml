@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" label="Deployment" max_length="40" name="x_95818_hvc_deploy_deployment" type="collection">
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Date of Deployment" max_length="40" name="u_date_of_deployment" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="Description" max_length="400" name="u_description" type="string"/>
+        <element attributes="encode_utf8=false" label="Employee" max_length="32" name="u_employee" reference="sys_user" type="reference"/>
+        <element attributes="encode_utf8=false" label="Employer" max_length="32" name="u_employer" reference="core_company" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Fail Codes" max_length="40" name="u_fail_code" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="First Communication Date" max_length="40" name="u_first_communication_date" type="glide_date_time"/>
+        <element attributes="encode_utf8=false" label="Location" max_length="32" name="u_location" reference="cmn_location" type="reference"/>
+        <element label="Reminder Frequency" max_length="40" name="u_reminder_frequency" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="State" max_length="40" name="u_state" type="string">
+            <choice>
+                <element inactive="true" inactive_on_update="true" label="Choice 2" sequence="0" value="Choice 2"/>
+                <element inactive_on_update="false" label="New" sequence="0" value="new"/>
+                <element inactive="true" inactive_on_update="true" label="Choice 3" sequence="1" value="Choice 3"/>
+                <element inactive_on_update="false" label="Success" sequence="1" value="success"/>
+                <element inactive_on_update="false" label="Failed" sequence="2" value="failed"/>
+                <element inactive_on_update="false" label="Scheduling" sequence="3" value="scheduling"/>
+                <element inactive_on_update="false" label="Work In Progress" sequence="4" value="work in progress"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="5" value="cancelled"/>
+            </choice>
+        </element>
+        <element attributes="encode_utf8=false" label="Technician" max_length="32" name="u_technician" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Work notes" max_length="40" name="work_notes" type="journal_input"/>
+        <index name="index">
+            <element name="u_employee"/>
+        </index>
+        <index name="index2">
+            <element name="u_technician"/>
+        </index>
+        <index name="index3">
+            <element name="u_location"/>
+        </index>
+        <index name="index4">
+            <element name="u_employer"/>
+        </index>
+    </element>
+</database>

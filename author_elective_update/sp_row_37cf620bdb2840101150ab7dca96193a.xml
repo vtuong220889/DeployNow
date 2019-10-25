@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_row">
+    <sp_row action="DELETE">
+        <class_name/>
+        <order>1</order>
+        <sp_column/>
+        <sp_container display_value="Service Portal - Container 2">2ef266c7dbe440101150ab7dca961901</sp_container>
+        <sys_class_name>sp_row</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-22 03:59:45</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>37cf620bdb2840101150ab7dca96193a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="HVC_DeployNow" source="x_95818_hvc_deploy">0d367af2db6400101150ab7dca96196a</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="HVC_DeployNow">0d367af2db6400101150ab7dca96196a</sys_scope>
+        <sys_update_name>sp_row_37cf620bdb2840101150ab7dca96193a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-22 03:59:45</sys_updated_on>
+    </sp_row>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="HVC_DeployNow">0d367af2db6400101150ab7dca96196a</application>
+        <file_path/>
+        <instance_id>58e2a633dbf7d3048264f70fbf961942</instance_id>
+        <instance_name>dev70566</instance_name>
+        <name>sp_row_37cf620bdb2840101150ab7dca96193a</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_row"><sp_row action="INSERT_OR_UPDATE"><class_name/><order>1</order><sp_column/><sp_container display_value="Service Portal - Container 2">2ef266c7dbe440101150ab7dca961901</sp_container><sys_class_name>sp_row</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2019-10-22 03:59:45</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>37cf620bdb2840101150ab7dca96193a</sys_id><sys_mod_count>0</sys_mod_count><sys_name>1</sys_name><sys_package display_value="HVC_DeployNow" source="x_95818_hvc_deploy">0d367af2db6400101150ab7dca96196a</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="HVC_DeployNow">0d367af2db6400101150ab7dca96196a</sys_scope><sys_update_name>sp_row_37cf620bdb2840101150ab7dca96193a</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2019-10-22 03:59:45</sys_updated_on></sp_row></record_update>]]></payload>
+        <payload_hash>-825208813</payload_hash>
+        <record_name>1</record_name>
+        <reverted_from/>
+        <source>cd367276dba400101150ab7dca961913</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-22 03:59:45</sys_created_on>
+        <sys_id>7fcf620bdb2840101150ab7dca96193b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16df19ee3850000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-22 03:59:45</sys_updated_on>
+        <type>Row</type>
+        <update_guid>77cf620b8c2840102847297702706e3b</update_guid>
+        <update_guid_history>77cf620b8c2840102847297702706e3b:-825208813</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Record deleted 2019-10-22 11:08:59">c7e1b2cbdb2840101150ab7dca9619d7</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-22 04:08:59</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sp_row">sp_row</sys_db_object>
+        <sys_id>221ea332588f4f5a938961a7168f5ec9</sys_id>
+        <sys_metadata>37cf620bdb2840101150ab7dca96193a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="HVC_DeployNow" source="x_95818_hvc_deploy">0d367af2db6400101150ab7dca96196a</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="HVC_DeployNow">0d367af2db6400101150ab7dca96196a</sys_scope>
+        <sys_scope_delete display_value="">281299c9287d490c9aa8bf73c254f510</sys_scope_delete>
+        <sys_update_name>sp_row_37cf620bdb2840101150ab7dca96193a</sys_update_name>
+        <sys_update_version display_value="sp_row_37cf620bdb2840101150ab7dca96193a">7fcf620bdb2840101150ab7dca96193b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-22 04:08:59</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

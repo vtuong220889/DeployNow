@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>primary</color>
+        <css/>
+        <glyph>empty</glyph>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>lg</size>
+        <sp_column display_value="2">b79d26c3db2840101150ab7dca961998</sp_column>
+        <sp_widget display_value="PE Pie Chart">343199d7db513200f687dfea5e961957</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-22 03:03:40</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>a2f226c7dbe440101150ab7dca9619fe</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>DeployNow</sys_name>
+        <sys_package display_value="HVC_DeployNow" source="x_95818_hvc_deploy">0d367af2db6400101150ab7dca96196a</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="HVC_DeployNow">0d367af2db6400101150ab7dca96196a</sys_scope>
+        <sys_update_name>sp_instance_a2f226c7dbe440101150ab7dca9619fe</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-22 04:12:04</sys_updated_on>
+        <title>DeployNow</title>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"interval": {
+		"value": "1970-01-01 02:00:00",
+		"displayValue": "1970-01-01 02:00:00"
+	},
+	"table": {
+		"value": "x_95818_hvc_deploy_deployment",
+		"displayValue": "x_95818_hvc_deploy_deployment"
+	},
+	"fields": {
+		"value": "u_location",
+		"displayValue": "u_location"
+	},
+	"encoded_query": {
+		"value": "",
+		"displayValue": ""
+	},
+	"script_include": {
+		"value": "",
+		"displayValue": ""
+	},
+	"function_name": {
+		"value": "",
+		"displayValue": ""
+	},
+	"param1": {
+		"value": "",
+		"displayValue": ""
+	},
+	"exporting": {
+		"value": "true",
+		"displayValue": "Enable"
+	},
+	"advance": {
+		"value": "",
+		"displayValue": ""
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=a2f226c7dbe440101150ab7dca9619fe"/>
+</record_update>

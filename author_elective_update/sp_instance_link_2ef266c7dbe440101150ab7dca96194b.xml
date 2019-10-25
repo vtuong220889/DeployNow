@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_link">
+    <sp_instance_link action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>warning</color>
+        <css/>
+        <glyph>child</glyph>
+        <id/>
+        <kb_article/>
+        <kb_category/>
+        <kb_topic/>
+        <order>1</order>
+        <roles/>
+        <sc_cat_item/>
+        <sc_category display_value="">e15706fc0a0a0aa7007fc21e1ab70c2f</sc_category>
+        <short_description>Contact support to make a request, or report a problem</short_description>
+        <size>md</size>
+        <sp_column display_value="3">e6f266c7dbe440101150ab7dca961949</sp_column>
+        <sp_page display_value="sc_category">07261a2147132100ba13a5554ee49092</sp_page>
+        <sp_widget display_value="Icon Link">3caa67afcb13020000f8d856634c9c2e</sp_widget>
+        <sys_class_name>sp_instance_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-22 03:03:41</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>2ef266c7dbe440101150ab7dca96194b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Get Help</sys_name>
+        <sys_package display_value="HVC_DeployNow" source="x_95818_hvc_deploy">0d367af2db6400101150ab7dca96196a</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="HVC_DeployNow">0d367af2db6400101150ab7dca96196a</sys_scope>
+        <sys_update_name>sp_instance_link_2ef266c7dbe440101150ab7dca96194b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-22 03:03:41</sys_updated_on>
+        <title>Get Help</title>
+        <type>sc_category</type>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"link_template": {
+		"value": "Circle Icon",
+		"displayValue": "Circle Icon"
+	}
+}]]></widget_parameters>
+    </sp_instance_link>
+    <sys_translated_text action="delete_multiple" query="documentkey=2ef266c7dbe440101150ab7dca96194b"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="HVC_DeployNow">0d367af2db6400101150ab7dca96196a</application>
+        <file_path/>
+        <instance_id>58e2a633dbf7d3048264f70fbf961942</instance_id>
+        <instance_name>dev70566</instance_name>
+        <name>sp_instance_link_2ef266c7dbe440101150ab7dca96194b</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance_link"&gt;&lt;sp_instance_link action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;warning&lt;/color&gt;&lt;css/&gt;&lt;glyph&gt;child&lt;/glyph&gt;&lt;id/&gt;&lt;kb_article/&gt;&lt;kb_category/&gt;&lt;kb_topic/&gt;&lt;order&gt;1&lt;/order&gt;&lt;roles/&gt;&lt;sc_cat_item/&gt;&lt;sc_category display_value=""&gt;e15706fc0a0a0aa7007fc21e1ab70c2f&lt;/sc_category&gt;&lt;short_description&gt;Contact support to make a request, or report a problem&lt;/short_description&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="3"&gt;e6f266c7dbe440101150ab7dca961949&lt;/sp_column&gt;&lt;sp_page display_value="sc_category"&gt;07261a2147132100ba13a5554ee49092&lt;/sp_page&gt;&lt;sp_widget display_value="Icon Link"&gt;3caa67afcb13020000f8d856634c9c2e&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance_link&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-22 03:03:41&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;&lt;sys_id&gt;2ef266c7dbe440101150ab7dca96194b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Get Help&lt;/sys_name&gt;&lt;sys_package display_value="HVC_DeployNow" source="x_95818_hvc_deploy"&gt;0d367af2db6400101150ab7dca96196a&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="HVC_DeployNow"&gt;0d367af2db6400101150ab7dca96196a&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_link_2ef266c7dbe440101150ab7dca96194b&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-10-22 03:03:41&lt;/sys_updated_on&gt;&lt;title&gt;Get Help&lt;/title&gt;&lt;type&gt;sc_category&lt;/type&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"link_template": {
+		"value": "Circle Icon",
+		"displayValue": "Circle Icon"
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance_link&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=2ef266c7dbe440101150ab7dca96194b"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-549643585</payload_hash>
+        <record_name>Get Help</record_name>
+        <reverted_from/>
+        <source>cd367276dba400101150ab7dca961913</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-22 03:03:41</sys_created_on>
+        <sys_id>2ef266c7dbe440101150ab7dca96194d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16df16b90680000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-22 03:03:41</sys_updated_on>
+        <type>Instance with Link</type>
+        <update_guid>26f266c74ce440107abec90f470a434d</update_guid>
+        <update_guid_history>26f266c74ce440107abec90f470a434d:-549643585</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Record deleted 2019-10-22 11:00:58">ad10be0bdb2840101150ab7dca961905</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-22 04:00:58</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sp_instance_link">sp_instance_link</sys_db_object>
+        <sys_id>7ef39dc69e8c4065b51984b309026a91</sys_id>
+        <sys_metadata>2ef266c7dbe440101150ab7dca96194b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Get Help</sys_name>
+        <sys_package display_value="HVC_DeployNow" source="x_95818_hvc_deploy">0d367af2db6400101150ab7dca96196a</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="HVC_DeployNow">0d367af2db6400101150ab7dca96196a</sys_scope>
+        <sys_scope_delete display_value="">281299c9287d490c9aa8bf73c254f510</sys_scope_delete>
+        <sys_update_name>sp_instance_link_2ef266c7dbe440101150ab7dca96194b</sys_update_name>
+        <sys_update_version display_value="sp_instance_link_2ef266c7dbe440101150ab7dca96194b">2ef266c7dbe440101150ab7dca96194d</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-22 04:00:58</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

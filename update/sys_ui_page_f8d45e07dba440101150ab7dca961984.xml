@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script/>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_95818_hvc_deploy_Sales Report.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<html>
+	<head>
+	<title>Sales Report</title>
+	<script type="text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular.min.js"></script>
+	<script src="http://cdn.rawgit.com/nnnick/Chart.js/master/Chart.min.js" type="text/javascript"></script>
+	<script src="http://cdn.rawgit.com/jtblin/angular-chart.js/master/dist/angular-chart.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="http://cdn.rawgit.com/jtblin/angular-chart.js/master/dist/angular-chart.css" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" />
+
+	<style type="text/css">
+		* { padding: 0; margin: 0; color: #003366;}
+		html, body, #fullheight {
+		    min-height: 100% !important;
+		    height: 100%;
+		}
+		body{
+			background-color: #F5F5F5;
+		}
+		th{
+			cursor: pointer;
+		}
+		.container{
+			width: 80%;
+			margin: 0 auto;
+			background-color: white;
+			padding: 5%;
+			border: 1px solid #F8F8F8;
+			box-shadow: 1px 1px 1px 1px #CCC;
+		}
+		.charts{
+			width: 100%;
+		}
+		.data{
+			margin-top: 7%;
+			width: 100%;
+		}
+		.chart{
+			width: 50%;
+			float: left;
+		}
+		.clearFloat{
+			clear: both;
+			float: none;
+			width: 100%;
+		}
+	</style>
+</head>
+<body ng-controller = "salesReportController" ng-init = "filters.sales = 0; filters.performer = 0; regionData = null; sortOrder = false">
+	<div class = "container">
+		<div class = "header">
+			<h1><span class = "glyphicon glyphicon-stats"></span> Sales Report</h1>
+		</div>
+		<br/><br/>
+		<h2>Total Company Sales</h2><br/>
+<!-- Charts -->
+		<div class = "charts">
+			<div class = "chart">
+				<h4><span class = "glyphicon glyphicon-tag"></span> Products</h4>
+				<canvas id="doughnut" class="chart chart-doughnut" chart-legend="true" chart-data="charts.products.data" chart-labels="charts.products.labels"></canvas> 
+			</div>
+			<div class = "chart">
+				<h4><span class = "glyphicon glyphicon-usd"></span> Sales</h4>
+				<canvas id="line" class="chart chart-line" chart-data="charts.sales.data" chart-labels="charts.sales.labels" chart-legend="true" chart-series="charts.sales.series"></canvas> 
+			</div>
+			<div class = "clearFloat"></div>
+		</div>
+<!-- End Charts -->
+		<br/><br/><br/><hr/>
+			<h2 style = "float: left;">Sales By Region: {{selectedRegion}}</h2><br/><br/>
+			<div class = "controls">
+			    <button ng-click = "selectRegion()" class = "btn btn-sm btn-primary" style = "float:right; margin-left: 10px; margin-right: 10px;">Select</button>
+			    <select name="salesTeams" id="salesTeams" ng-model="selectedRegion" style = "float: right; width: 25%;">
+			    	<option ng-repeat="option in regions" value="{{option.value}}">{{option.name}}</option>
+			    </select>
+			</div>
+			<div class = "clearFloat"></div>
+		<div class = "data" ng-if = "regionData != null">		
+<!-- Report Controls -->			
+			<div style = "float: left; width: 35%;">
+				<span class = "glyphicon glyphicon-search"></span> <input type = "text" ng-model = "filters.search" style = "width: 90%;"/>
+			</div>
+			<div style = "float: right;">
+				<button id = "filters.allPerformers" type="button" class="btn btn-info btn-sm" ng-click = "filters.performer = 0; selectedFilter('performers', 'filters.allPerformers')">
+					<span class="glyphicon glyphicon-user" aria-hidden="true"></span> All Performers
+				</button>				
+				<button id = "filters.topPerformer" type="button" class="btn btn-default btn-sm" ng-click = "filters.performer = 1; selectedFilter('performers','filters.topPerformer')">
+					<span class="glyphicon glyphicon-user" aria-hidden="true"></span> Top Performer
+				</button>
+				<button id = "filters.high" type="button" class="btn btn-default btn-sm" ng-click = "filters.sales = 1000; selectedFilter('sales','filters.high')">
+					<span class="glyphicon glyphicon-star" aria-hidden="true"></span> $1k and up
+				</button>
+				<button id = "filters.medium" type="button" class="btn btn-default btn-sm" ng-click = "filters.sales = 500; selectedFilter('sales','filters.medium')">
+					<span class="glyphicon glyphicon-star" aria-hidden="true"></span> $500 and up
+				</button>
+				<button id = "filters.all" type="button" class="btn btn-primary btn-sm" ng-click = "filters.sales = 0; selectedFilter('sales','filters.all')">
+					<span class="glyphicon glyphicon-star" aria-hidden="true"></span> $0 and up
+				</button>
+			</div>
+<!-- End Report Controls -->
+			<div class = "clearFloat"></div>
+			<br/><br/>
+			<table class = "table">
+				<thead>
+					<th ng-click = "orderByField = 'region'; sortOrder = !sortOrder">Region</th>
+					<th ng-click = "orderByField = 'teamMember'; sortOrder = !sortOrder">Employee</th>
+					<th ng-click = "orderByField = 'sales'; sortOrder = !sortOrder">Sales</th>
+					<th ng-click = "orderByField = 'quantity'; sortOrder = !sortOrder">Quantity</th>
+					<th ng-click = "orderByField = 'averageDealSize'; sortOrder = !sortOrder">Avg Deal Size</th>
+				</thead>
+				<tbody>
+					<tr ng-repeat = "data in regionData | getAverageDealSize | rankPerformers | filter: filters.search | filter: filterSalesLevelByValue('sales', filters.sales) | filter: filterByRank('rank', filters.performer) | orderBy: orderByField:sortOrder">
+						<td>{{data.region}}</td>
+						<td>{{data.teamMember}}</td>						
+						<td>{{data.sales | currency:"$"}}</td>
+						<td>{{data.quantity | number: 2}}</td>
+						<td>{{data.averageDealSize | currency: "$"}}</td>
+					</tr>
+				</tbody>	
+			</table>
+			<br/><br/><br/><br/>
+		</div>
+	</div>		
+</body>
+<script type="text/javascript">
+	var app = angular.module('salesReportApp', ["chart.js"]);
+	app.service('dataService', function(){
+		this.getChartData = function(){
+			return {
+				products : {
+					data 	: [340, 512, 621],
+					labels 	: ['dishwashers', 'ovens', 'refrigerators']
+				},
+				sales : {
+					data 	: [[80123, 90324, 74030, 85100, 122012, 121340]],
+					labels 	: ['jan', 'feb', 'mar', 'apr', 'may', 'june'],
+					series 	: ['sales']
+				}				
+			};	
+		};				
+		this.getRegionData = function(region){
+			var array = [
+				{
+					region 		: 'West',
+					teamMember 	: 'Susan Johnson',
+					sales 		: 1862.21,
+					quantity 	: 53					
+				},
+				{
+					region 		: 'West',
+					teamMember 	: 'Carmen Diego',
+					sales 		: 1235.40,
+					quantity 	: 85					
+				},				
+				{
+					region 		: 'West',
+					teamMember 	: 'Brian Delgado',
+					sales 		: 831.84,
+					quantity 	: 44					
+				},
+				{
+					region 		: 'West',
+					teamMember 	: 'Sandra Petrone',
+					sales 		: 903.35,
+					quantity 	: 63					
+				},	
+				{
+					region 		: 'West',
+					teamMember 	: 'Thomas Fortan',
+					sales 		: 775.68,
+					quantity 	: 36
+				},
+				{
+					region 		: 'West',
+					teamMember 	: 'Bill Cobol',
+					sales 		: 1105,
+					quantity 	: 90
+				},
+				{
+					region 		: 'West',
+					teamMember 	: 'Charlena Bergman',
+					sales 		: 483.20,
+					quantity 	: 21
+				},			
+				{
+					region 		: 'East',
+					teamMember 	: 'Pete FancyPants',
+					sales 		: 293.23,
+					quantity 	: 51					
+				},
+				{
+					region 		: 'East',
+					teamMember 	: 'Cindy Cruz',
+					sales 		: 1962.11,
+					quantity 	: 80					
+				},
+				{
+					region 		: 'East',
+					teamMember 	: 'Brenda Joel',
+					sales 		: 1862.21,
+					quantity 	: 53					
+				},
+				{
+					region 		: 'East',
+					teamMember 	: 'Randy Daniels',
+					sales 		: 2862.21,
+					quantity 	: 94					
+				},
+				{
+					region 		: 'East',
+					teamMember 	: 'Wendy Peppercorn',
+					sales 		: 3396.19,
+					quantity 	: 47					
+				},
+				{
+					region 		: 'South',
+					teamMember 	: 'Tommy Gunner',
+					sales 		: 362.21,
+					quantity 	: 24					
+				},
+				{
+					region 		: 'South',
+					teamMember 	: 'Brit McBeth',
+					sales 		: 36.19,
+					quantity 	: 1					
+				},
+				{
+					region 		: 'South',
+					teamMember 	: 'Richard Randles',
+					sales 		: 162.21,
+					quantity 	: 13					
+				},
+				{
+					region 		: 'South',
+					teamMember 	: 'Sarah Jones',
+					sales 		: 796.19,
+					quantity 	: 47					
+				}				
+			];
+			return array.filter(function(data){
+				return data.region === region;
+			});
+		};
+		this.getRegions = function(){
+			return [
+				{
+					value 	: 'West',
+					name 	: 'West'
+				},
+				{
+					value 	: 'East',
+					name 	: 'East'
+				},
+				{
+					value 	: 'South',
+					name 	: 'South'
+				}
+			];
+		}
+	});
+	app.filter('getAverageDealSize', function() {
+		//Filter:: null -> function
+		/*
+			Creates filter that computes average
+			deal size and applies it to the table
+		*/
+	    return function(array) {
+	    	array.forEach(function(obj){
+	    		obj.averageDealSize = obj.sales / obj.quantity;
+	    	});
+	        return array;
+	    }
+	});
+	app.filter('rankPerformers', function(){
+		//Filter:: null -> function
+		return function(array){
+			array = array.sort(function(prev, next){
+				return next.sales - prev.sales;
+			});
+			array.forEach(function(obj, index){
+				obj.rank = (index + 1);
+			});
+			return array;
+		};
+	});
+	app.controller('salesReportController', function($scope, dataService){
+		//Controller:: $scope, service -> null
+		/*
+			Sales Report Controller
+		*/
+		//set up variables
+		$scope.charts 		= dataService.getChartData();
+		$scope.regionData 	= dataService.getRegionData('All');
+		$scope.regions 		= dataService.getRegions();
+		$scope.selectRegion = function(){
+			//Scope:: null -> null
+			/*
+				uses dataService to get Regional data and 
+				applies it to the view
+			*/
+			$scope.regionData = dataService.getRegionData($scope.selectedRegion);
+		};
+		$scope.filterSalesLevelByValue = function(property, value){
+			//Scope:: string, number -> function
+			/*
+				Creates a filter to apply to data table
+			*/
+			return function(obj){
+				return obj[property] >= value;
+			};
+		};
+		$scope.filterByRank = function(property, value){
+			if(value === 0){
+				return function(obj){
+					return obj;
+				}
+			}
+			else{
+				return function(obj){
+					return obj[property] === value;	
+				};				
+			}
+		};
+		$scope.selectedFilter = function(buttonGroup, id){
+			//Scope:: id -> null
+			/*
+				Applies css classes based on button selected
+			*/
+			//track our buttons in an array
+			switch(buttonGroup){
+				case 'sales':
+					var buttons = [
+						'filters.high',
+						'filters.medium',
+						'filters.all'
+					];
+					var selectedClass = 'btn btn-primary btn-sm';
+					break;				
+				case 'performers':
+					var buttons = [
+						'filters.topPerformer',
+						'filters.allPerformers'
+					];	
+					var selectedClass = 'btn btn-info btn-sm';					
+					break;			
+			}			
+			//declare our default css classes to apply
+			var defaultClass 	= 'btn btn-default btn-sm';
+			//reset all classes to default class
+			buttons.forEach(function(button){
+				angular.element(document.getElementById(button)).removeClass(selectedClass);
+				angular.element(document.getElementById(button)).addClass(defaultClass);
+			});
+			//get the element that was click on and change its class
+			angular.element(document.getElementById(id)).addClass(selectedClass);			
+		}
+	});
+</script>
+</html>
+</j:jelly>]]></html>
+        <name>Sales Report</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-10-22 02:05:21</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>f8d45e07dba440101150ab7dca961984</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Sales Report</sys_name>
+        <sys_package display_value="HVC_DeployNow" source="x_95818_hvc_deploy">0d367af2db6400101150ab7dca96196a</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="HVC_DeployNow">0d367af2db6400101150ab7dca96196a</sys_scope>
+        <sys_update_name>sys_ui_page_f8d45e07dba440101150ab7dca961984</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-10-22 02:05:21</sys_updated_on>
+    </sys_ui_page>
+</record_update>
